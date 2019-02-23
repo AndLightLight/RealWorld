@@ -1,0 +1,7 @@
+/RealWorldGame/Temp/
+/RealWorldGame/Library/
+/RealWorldGame/Packages/
+/RealWorldGame/obj/
+/RealWorldGame/.vs/
+Assembly-CSharp.csproj
+RealWorldGame.sln
