@@ -3,5 +3,5 @@
 /RealWorldGame/Packages/
 /RealWorldGame/obj/
 /RealWorldGame/.vs/
-Assembly-CSharp.csproj
+*.csproj
 RealWorldGame.sln
