@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027876fa3124fe44db2b62b27e801f12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 162385147}
+  prefab: {fileID: 871925503}
 --- !u!1 &162385147
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
-    mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-    material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+    mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 3}
+    material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 3}
     subMesh: 0
     castShadows: 0
     receiveShadows: 0
@@ -370,7 +370,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11415552, guid: 435fa2cb799997c46a75eea40a87eaba, type: 2}
       propertyPath: _isKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 112066, guid: 435fa2cb799997c46a75eea40a87eaba, type: 2}
       propertyPath: m_IsActive
@@ -490,9 +490,9 @@ MonoBehaviour:
   m_SerializedData:
     position:
       x:
-        _serializedValue: 0
+        _serializedValue: 11553462272
       y:
-        _serializedValue: 0
+        _serializedValue: 74174087168
       z:
         _serializedValue: 0
     linearVelocity:
@@ -515,11 +515,44 @@ MonoBehaviour:
       _serializedValue: 0
     inactiveTime:
       _serializedValue: 0
-    isActive: 0
-    isStatic: 0
-    isKinematic: 0
-    affectedByGravity: 0
-    isColliderOnly: 0
+    inverseMass:
+      _serializedValue: 0
+    force:
+      x:
+        _serializedValue: 0
+      y:
+        _serializedValue: 0
+      z:
+        _serializedValue: 0
+    torque:
+      x:
+        _serializedValue: 0
+      y:
+        _serializedValue: 0
+      z:
+        _serializedValue: 0
+    internalIndex: 0
+    marker: 0
+    _freezePosition:
+      x:
+        _serializedValue: 0
+      y:
+        _serializedValue: 0
+      z:
+        _serializedValue: 0
+    _freezeRotationQuat:
+      x:
+        _serializedValue: 0
+      y:
+        _serializedValue: 0
+      z:
+        _serializedValue: 0
+      w:
+        _serializedValue: 0
+    linearDrag:
+      _serializedValue: 0
+    angularDrag:
+      _serializedValue: 0
 --- !u!114 &871925505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
-    mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     material: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
     subMesh: 0
     castShadows: 0
