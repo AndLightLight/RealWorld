@@ -676,6 +676,7 @@ namespace TrueSync.Physics3D {
             }
         }
 
+        //hll 当方向和速度改变的时候，或者从一个粒子变成一个非粒子的时候需要更新形状和和包围盒
         /// <summary>
         /// Recalculates the axis aligned bounding box and the inertia
         /// values in world space.

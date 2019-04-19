@@ -55,7 +55,7 @@ namespace TrueSync {
                 _position = value;
 
                 if (tsCollider != null && tsCollider.Body != null) {
-                    tsCollider.Body.TSPosition = _position + scaledCenter;
+                    //tsCollider.Body.TSPosition = _position + scaledCenter;
                 }
 
                 UpdateChildPosition();

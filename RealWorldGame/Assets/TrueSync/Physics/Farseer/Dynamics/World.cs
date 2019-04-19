@@ -332,7 +332,7 @@ namespace TrueSync.Physics2D
 
                     // You tried to remove a body that is not contained in the BodyList.
                     // Are you removing the body more than once?
-                    //Debug.Assert(BodyList.Contains(body));
+                    //Debug.Assert(BodyList.Contains(body));                                                                                                            
 
                     bool isOnAddList = _bodyAddList.Contains(body);
 

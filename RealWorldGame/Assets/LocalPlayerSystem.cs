@@ -4,7 +4,9 @@ using Unity.Entities;
 using Unity.Jobs;
 using Unity.Transforms;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
+[UpdateBefore(typeof(FixedUpdate))]
 class LocalPlayerSystem : JobComponentSystem
 {
 	struct Group
@@ -46,7 +48,7 @@ class LocalPlayerSystem : JobComponentSystem
 
 	override protected JobHandle OnUpdate(JobHandle inputDeps)
 	{
-		if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
 		{
 			for (int i = 0;i < filter.Length; ++i)
 			{

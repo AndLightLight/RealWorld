@@ -601,10 +601,12 @@ namespace TrueSync.Physics3D
             
             CheckDeactivation();
 
+            //hll 整合所有的力来计算速度
             IntegrateForces();
 
             HandleArbiter(contactIterations);
 
+            //hll 根据之前整合的线性速度和角速度计算位置和方向
             Integrate();
 
             for (int index = 0, length = rigidBodies.Count; index < length; index++) {
@@ -777,23 +779,26 @@ namespace TrueSync.Physics3D
             }
         }
 
+        //hll 整合所有的力来计算速度
         private void IntegrateForces()
         {
             for (int index = 0, length = rigidBodies.Count; index < length; index++) {
                 RigidBody body = rigidBodies[index];
                 if (!body.isStatic && body.IsActive)
                 {
+                    //hll 根据外力和体重计算线性速度
                     TSVector temp;
                     TSVector.Multiply(ref body.force, body.inverseMass * timestep, out temp);
                     TSVector.Add(ref temp, ref body.linearVelocity, out body.linearVelocity);
 
+                    //hll 根据扭矩计算角速度
                     if (!(body.isParticle))
                     {
                         TSVector.Multiply(ref body.torque, timestep, out temp);
                         TSVector.Transform(ref temp, ref body.invInertiaWorld, out temp);
                         TSVector.Add(ref temp, ref body.angularVelocity, out body.angularVelocity);
                     }
-
+                    //hll 根据重力计算线性速度
                     if (body.affectedByGravity)
                     {
                         TSVector.Multiply(ref gravity, timestep, out temp);
@@ -807,6 +812,7 @@ namespace TrueSync.Physics3D
             }
         }
 
+        //hll 根据之前整合的线性速度和角速度计算位置和方向
         #region private void IntegrateCallback(object obj)
         private void IntegrateCallback(object obj)
         {
@@ -854,7 +860,7 @@ namespace TrueSync.Physics3D
 
             body.Update();
 
-            
+            //hll 预测碰撞 https://github.com/mattleibow/jitterphysics/wiki/Speculative-Contacts
             if (CollisionSystem.EnableSpeculativeContacts || body.EnableSpeculativeContacts)
                 body.SweptExpandBoundingBox(timestep);
         }

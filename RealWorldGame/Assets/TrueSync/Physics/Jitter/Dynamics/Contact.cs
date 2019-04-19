@@ -32,15 +32,30 @@ namespace TrueSync.Physics3D {
 
         internal MaterialCoefficientMixingType materialMode = MaterialCoefficientMixingType.UseAverage;
 
-        public FP MaximumBias { get { return maximumBias; } set { maximumBias = value; } }
+        public FP MaximumBias { get { return maximumBias; }
+			set {
+				maximumBias = value;
+			} }
 
-        public FP BiasFactor { get { return bias; } set { bias = value; } }
+        public FP BiasFactor { get { return bias; }
+			set {
+				bias = value;
+			} }
 
-        public FP MinimumVelocity { get { return minVelocity; } set { minVelocity = value; } }
+        public FP MinimumVelocity { get { return minVelocity; }
+			set {
+				minVelocity = value;
+			} }
 
-        public FP AllowedPenetration { get { return allowedPenetration; } set { allowedPenetration = value; } }
+        public FP AllowedPenetration { get { return allowedPenetration; }
+			set {
+				allowedPenetration = value;
+			} }
 
-        public FP BreakThreshold { get { return breakThreshold; } set { breakThreshold = value; } }
+        public FP BreakThreshold { get { return breakThreshold; }
+			set {
+				breakThreshold = value;
+			} }
 
         public MaterialCoefficientMixingType MaterialCoefficientMixing { get { return materialMode; } set { materialMode = value; } }
     }

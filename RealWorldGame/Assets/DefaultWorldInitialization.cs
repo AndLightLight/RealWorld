@@ -4,6 +4,15 @@ using UnityEngine;
 
 namespace Unity.Entities
 {
+// 	static class AutomaticWorldBootstrap
+// 	{
+// 		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+// 		static void Initialize()
+// 		{
+// 			DefaultWorldInitialization.Initialize("Default World", false);
+// 		}
+// 	}
+
 	static class DefaultWorldInitialization
 	{
 		static void DomainUnloadShutdown()
